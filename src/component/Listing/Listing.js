@@ -19,7 +19,7 @@ const Listing = () => {
 
   const fetchWebsites = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/websites/list", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/list`, {
         headers: {
           "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
@@ -43,7 +43,7 @@ const Listing = () => {
 
   const togglePause = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/websites/toggle-pause/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/toggle-pause/${id}`, {
         method: "PATCH",
         headers: {
           "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -65,7 +65,7 @@ const Listing = () => {
     if (!deleteId) return;
     
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/websites/${deleteId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/${deleteId}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${localStorage.getItem("token")}`

@@ -56,7 +56,7 @@ const Dashboard = () => {
 
   const fetchStats = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/websites/list", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/list`, {
         headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
       });
       if (response.ok) {
@@ -76,7 +76,7 @@ const Dashboard = () => {
 
   const fetchActivity = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/websites/logs/activity", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/logs/activity`, {
         headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
       });
       if (response.ok) {

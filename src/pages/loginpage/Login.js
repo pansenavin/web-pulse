@@ -14,7 +14,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/userauth/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/userauth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })
@@ -31,7 +31,7 @@ function Login() {
       }
     } catch (error) {
       console.error("Login error:", error);
-      showNotification("Server error. Ensure backend is running.", "error");
+      showNotification("Oops! We couldn't connect to the server. Please try again later.", "error");
     }
   };
 
