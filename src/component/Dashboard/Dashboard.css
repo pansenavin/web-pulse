@@ -1,0 +1,153 @@
+.dashboard-container {
+  padding-bottom: 50px;
+}
+
+.dashboard-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #b2f5ea, #38b2ac);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Summary Cards Area */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.summary-card h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.summary-card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f8fafc;
+}
+
+/* Highlighting specific status */
+.summary-card.up p {
+  color: #10b981;
+}
+
+.summary-card.down p {
+  color: #ef4444;
+}
+
+.summary-card.total p {
+  color: #6366f1;
+}
+
+/* Service Health Overview Layout */
+.health-overview {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 24px;
+}
+
+.overview-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.overview-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 24px;
+}
+
+/* Activity Feed Styling */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: background 0.2s;
+}
+
+.activity-item:hover {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.activity-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.activity-icon.up {
+  background-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.activity-icon.down {
+  background-color: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+.activity-icon.info {
+  background-color: #3b82f6;
+}
+
+.activity-text {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.activity-text b {
+  color: #f8fafc;
+}
+
+.activity-time {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+@media (max-width: 992px) {
+  .health-overview {
+    grid-template-columns: 1fr;
+  }
+}

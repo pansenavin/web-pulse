@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #1c1e2f, #1f4037);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f0f0f0;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  background-color: limegreen;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.brand-name {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.register-container {
+  background: #3b4952;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(116, 77, 77, 0.3);
+  width: 450px;
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.register-container form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #353535;
+  color: #fff;
+}
+
+.register-container form input::placeholder {
+  color: #aaa;
+}
+
+.register-container form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-container form button:hover {
+  background-color: #46ae4b;
+}
+
+.login-btn {
+  display: inline-block;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  text-decoration: underline;
+}
+
+.ptop-margin{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+}
+
+.mobile-group {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.mobile-group select {
+  flex-shrink: 0;
+  width: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #353535;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.mobile-group input {
+  flex: 1;
+  margin: 0 !important;
+}
