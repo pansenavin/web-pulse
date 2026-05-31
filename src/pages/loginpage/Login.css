@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #1c1e2f, #1f4037);
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f0f0;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.4em;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.login-container {
+  background-color: #3b4952;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  width: 450px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #444;
+  background: #353535;
+  color: #fff;
+}
+
+.login-container input::placeholder {
+  color: #aaa;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  font-size: 0.9em;
+  color: #4CAF50;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+.register-btn {
+  display: inline-block;
+  margin-top: 15px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-btn:hover {
+  text-decoration: underline;
+}
+
+.ptop-margin{
+  margin-top: 30px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 35px; /* space for icon */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+}
