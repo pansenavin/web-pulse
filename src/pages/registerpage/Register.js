@@ -37,7 +37,7 @@ function Register() {
 
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/userauth/register", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/userauth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, mobile, dial_code: dialCode })
@@ -52,7 +52,7 @@ function Register() {
       }
     } catch (error) {
       console.error("Registration error:", error);
-      showNotification("Server error. Ensure backend is running.", "error");
+      showNotification("Oops! We couldn't connect to the server. Please try again later.", "error");
     } finally {
       setLoading(false);
     }

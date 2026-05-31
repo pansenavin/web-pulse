@@ -35,7 +35,7 @@ function AddWebsite() {
     const intervalMinutes = intervalMap[interval];
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/websites/add", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

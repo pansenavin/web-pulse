@@ -30,7 +30,7 @@ function EditWebsite() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/websites/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/${id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -77,7 +77,7 @@ function EditWebsite() {
     const intervalMinutes = intervalMap[interval];
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/websites/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/websites/${id}`, {
         method: "PUT",
 
         headers: {
